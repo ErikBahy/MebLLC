@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import Meta from "./../components/Meta";
 import HeroSection2 from "./../components/HeroSection2";
 import FeaturesSection from "./../components/FeaturesSection";
@@ -6,6 +7,8 @@ import VideoSection from "./../components/VideoSection";
 import NewsletterSection from "./../components/NewsletterSection";
 
 function IndexPage(props) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Meta />
@@ -14,10 +17,10 @@ function IndexPage(props) {
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Entrust Your Safety to MEB LLC Security"
-        subtitle="MEB LLC Security provides top-level security, correct and efficient solutions  to meet the specific needs of each client. Our highly trained and skilled personnel excel in VIP accompaniment, property protection, and event security, ensuring uncompromising safety and  protection."
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
         image="https://i.imgur.com/CGfH9oT.png"
-        buttonText="Contact us"
+        buttonText={t('hero.contactUs')}
         buttonColor="primary"
         buttonPath="/pricing"
       />
@@ -26,16 +29,16 @@ function IndexPage(props) {
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Our Key Security Services"
-        subtitle="Providing Unmatched Protection and Expertise Across Various Environments"
+        title={t('features.title')}
+        subtitle={t('features.subtitle')}
       />
       <VideoSection
         bgColor="default"
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Watch the video below for a quick introduction to our team"
-        subtitle=""
+        title={t('video.title')}
+        subtitle={t('video.subtitle')}
         embedUrl="https://www.youtube.com/embed/z9Ul9ccDOqE"
       />
       <NewsletterSection
@@ -43,12 +46,12 @@ function IndexPage(props) {
         size="medium"
         bgImage=""
         bgImageOpacity={1}
-        title="Stay Secure with MEB LLC Security"
-        subtitle=" Contact Us Today for Unmatched Protection and Peace of Mind"
-        buttonText="Subscribe"
+        title={t('newsletter.title')}
+        subtitle={t('newsletter.subtitle')}
+        buttonText={t('newsletter.subscribe')}
         buttonColor="primary"
-        inputPlaceholder="Enter your email"
-        subscribedMessage="You are now subscribed!"
+        inputPlaceholder={t('newsletter.placeholder')}
+        subscribedMessage={t('newsletter.success')}
       />
     </>
   );

@@ -6,15 +6,13 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { emphasize } from "@material-ui/core/styles/colorManipulator";
+import { useTranslation } from 'react-i18next';
 import Section from "./Section";
 import SectionHeader from "./SectionHeader";
 import AspectRatio from "./AspectRatio";
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
-    // Add border that contrasts lightly with background color.
-    // We use boxShadow so that it's hidden around outer edge
-    // due to container <Card> having overflow: hidden
     boxShadow: `1px 1px 0 0 ${emphasize(theme.palette.background.paper, 0.08)}`,
     textAlign: "center",
   },
@@ -28,44 +26,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Define images outside the component (you can move this to a separate config file if preferred)
+const featureImages = [
+  "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg",  // Replace with your actual image paths
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWTeDjrQ5djB2wkM-WjNxsuyHs2tcOhzXYg&s",
+  "https://i.imgur.com/FegsL5M.png",
+  "https://i.imgur.com/Lh9bxdu.png",
+  "https://i.imgur.com/kGUNeiv.png",
+  "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg"
+];
+
 function FeaturesSection(props) {
   const classes = useStyles();
+  const { t } = useTranslation();
 
-  const items = [
-    {
-      title: "Accompanying VIP Personalities",
-      body: "Our elite security team ensures the safety and comfort of VIPs, providing discreet and professional protection at all times.",
-      image:
-        "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg",
-    },
-    {
-      title: " Luxury Escort Services for VIP Accompaniment",
-      body: "We offer luxurious and secure escort services for VIP clients, combining elegance with top-tier security.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWTeDjrQ5djB2wkM-WjNxsuyHs2tcOhzXYg&s",
-    },
-    {
-      title: "Physical Security and Protection of Properties",
-      body: "Ensure the utmost protection of your properties with our advanced physical security, engineered to prevent and swiftly counteract any potential threats.",
-      image: "https://i.imgur.com/FegsL5M.png",
-    },
-    {
-      title: "Security Services in Casinos",
-      body: "Specialized security services for casinos, ensuring a safe and secure environment for guests and staff.",
-      image: "https://i.imgur.com/Lh9bxdu.png",
-    },
-    {
-      title: "Monitoring Properties through the Operations Room",
-      body: "Our advanced operations room provides continuous 24/7 monitoring and swift response to any security breaches, ensuring immediate and effective action.",
-      image: "https://i.imgur.com/kGUNeiv.png",
-    },
-    {
-      title: "Other Security Services",
-      body: "We offer a wide range of security services tailored to various needs, including: Residential homes and private parties, tours and tourist events, stadiums and football matches, warehouses, banks, business centers, shopping centers, fairs, construction sites, residences, government institutions, and hotels and pubs.",
-      image:
-        "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg",
-    },
-  ];
+  // Get items from translations
+  const items = t('features.items', { returnObjects: true });
+
+  // Combine translations with images
+  const itemsWithImages = items.map((item, index) => ({
+    ...item,
+    image: featureImages[index]
+  }));
 
   return (
     <Section
@@ -76,14 +58,14 @@ function FeaturesSection(props) {
     >
       <Container>
         <SectionHeader
-          title={props.title}
-          subtitle={props.subtitle}
+          title={t('features.title')}
+          subtitle={t('features.subtitle')}
           size={4}
           textAlign="center"
         />
         <Card raised={false}>
           <Grid container={true}>
-            {items.map((item, index) => (
+            {itemsWithImages.map((item, index) => (
               <Grid
                 item={true}
                 xs={12}
