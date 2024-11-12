@@ -133,44 +133,6 @@ function Footer(props) {
                       variant="overline"
                       className={classes.listItemTextHeader}
                     >
-                      Company
-                    </Typography>
-                  </ListItem>
-                  <ListItem
-                    component={Link}
-                    to="/about"
-                    button={true}
-                    className={classes.listItem}
-                  >
-                    <ListItemText>{t('footer.about')}</ListItemText>
-                  </ListItem>
-                  <ListItem
-                    component={Link}
-                    to="/contact"
-                    button={true}
-                    className={classes.listItem}
-                  >
-                    <ListItemText>{t('footer.contact')}</ListItemText>
-                  </ListItem>
-                  <ListItem
-                    button={true}
-                    component="a"
-                    href="https://medium.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={classes.listItem}
-                  >
-                    <ListItemText>{t('footer.blog')}</ListItemText>
-                  </ListItem>
-                </List>
-              </Grid>
-              <Grid item={true} xs={12} md={4}>
-                <List disablePadding={true}>
-                  <ListItem className={classes.listItem}>
-                    <Typography
-                      variant="overline"
-                      className={classes.listItemTextHeader}
-                    >
                       Social
                     </Typography>
                   </ListItem>

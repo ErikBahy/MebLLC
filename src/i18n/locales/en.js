@@ -57,6 +57,10 @@ export default {
   footer: {
     description: 'Rest assured with us around',
     terms: 'Terms',
-    privacy: 'Privacy'
+    privacy: 'Privacy',
+    company: 'Company',
+    about: 'About',
+    contact: 'Contact',
+    blog: 'Blog'
   }
 }; 

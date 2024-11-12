@@ -57,6 +57,10 @@ export default {
   footer: {
     description: 'Ndihuni të sigurt me ne pranë',
     terms: 'Kushtet',
-    privacy: 'Privatësia'
+    privacy: 'Privatësia',
+    company: 'Kompania',
+    about: 'Rreth nesh',
+    contact: 'Kontakt',
+    blog: 'Blog'
   }
 }; 
