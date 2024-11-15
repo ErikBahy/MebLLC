@@ -32,7 +32,7 @@ function IndexPage(props) {
         title={t('features.title')}
         subtitle={t('features.subtitle')}
       />
-      <VideoSection
+      {/* <VideoSection
         bgColor="default"
         size="medium"
         bgImage=""
@@ -40,7 +40,7 @@ function IndexPage(props) {
         title={t('video.title')}
         subtitle={t('video.subtitle')}
         embedUrl="https://www.youtube.com/embed/z9Ul9ccDOqE"
-      />
+      /> */}
       <NewsletterSection
         bgColor="default"
         size="medium"
