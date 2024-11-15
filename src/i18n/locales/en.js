@@ -49,7 +49,7 @@ export default {
   },
   newsletter: {
     title: 'Stay Secure with MEB LLC Security',
-    subtitle: 'Contact Us Today for Unmatched Protection and Peace of Mind',
+    subtitle: 'Provide your email or contact info and we will reach out to you',
     subscribe: 'Subscribe',
     placeholder: 'Enter your email',
     success: 'You are now subscribed!'
@@ -148,6 +148,20 @@ export default {
     insurance: {
       question: "What type of insurance coverage do you maintain?",
       answer: "We maintain comprehensive insurance coverage including general liability, professional liability, workers' compensation, and vehicle insurance. Our coverage meets or exceeds industry standards and client requirements, providing peace of mind for all stakeholders."
+    }
+  },
+  contact: {
+    title: 'Contact Us',
+    subtitle: 'We are here to help with any questions you have',
+    form: {
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      nameRequired: 'Please enter your name',
+      emailRequired: 'Please enter your email',
+      messageRequired: 'Please enter a message',
+      send: 'Send message',
+      success: 'Your message has been sent successfully!',
     }
   }
 }; 

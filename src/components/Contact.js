@@ -7,8 +7,10 @@ import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { useForm } from "react-hook-form";
 import contact from "./../util/contact";
+import { useTranslation } from 'react-i18next';
 
 function Contact(props) {
+  const { t } = useTranslation();
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState(null);
   const { handleSubmit, register, errors, reset } = useForm();
@@ -45,7 +47,9 @@ function Contact(props) {
     <>
       {formAlert && (
         <Box mb={3}>
-          <Alert severity={formAlert.type}>{formAlert.message}</Alert>
+          <Alert severity={formAlert.type}>
+            {formAlert.type === "success" ? t('contact.form.success') : formAlert.message}
+          </Alert>
         </Box>
       )}
 
@@ -56,13 +60,13 @@ function Contact(props) {
               <TextField
                 variant="outlined"
                 type="text"
-                label="Name"
+                label={t('contact.form.name')}
                 name="name"
                 error={errors.name ? true : false}
-                helperText={errors.name && errors.name.message}
+                helperText={errors.name && t('contact.form.nameRequired')}
                 fullWidth={true}
                 inputRef={register({
-                  required: "Please enter your name",
+                  required: t('contact.form.nameRequired'),
                 })}
               />
             </Grid>
@@ -72,13 +76,13 @@ function Contact(props) {
             <TextField
               variant="outlined"
               type="email"
-              label="Email"
+              label={t('contact.form.email')}
               name="email"
               error={errors.email ? true : false}
-              helperText={errors.email && errors.email.message}
+              helperText={errors.email && t('contact.form.emailRequired')}
               fullWidth={true}
               inputRef={register({
-                required: "Please enter your email",
+                required: t('contact.form.emailRequired'),
               })}
             />
           </Grid>
@@ -86,15 +90,15 @@ function Contact(props) {
             <TextField
               variant="outlined"
               type="text"
-              label="Message"
+              label={t('contact.form.message')}
               name="message"
               multiline={true}
               rows={5}
               error={errors.message ? true : false}
-              helperText={errors.message && errors.message.message}
+              helperText={errors.message && t('contact.form.messageRequired')}
               fullWidth={true}
               inputRef={register({
-                required: "Please enter a message",
+                required: t('contact.form.messageRequired'),
               })}
             />
           </Grid>
@@ -106,8 +110,7 @@ function Contact(props) {
               type="submit"
               disabled={pending}
             >
-              {!pending && <span>{props.buttonText}</span>}
-
+              {!pending && <span>{t('contact.form.send')}</span>}
               {pending && <CircularProgress size={28} />}
             </Button>
           </Grid>

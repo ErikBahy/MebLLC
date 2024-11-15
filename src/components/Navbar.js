@@ -67,6 +67,9 @@ function Navbar(props) {
               <img src={logo} alt="Logo" className={classes.logo} />
             </Link>
             <Hidden smDown={true} implementation="css">
+              <Button component={Link} to="/contact" color="inherit">
+                {t('nav.contact')}
+              </Button>
               <Button component={Link} to="/about" color="inherit">
                 {t('nav.about')}
               </Button>
@@ -105,17 +108,6 @@ function Navbar(props) {
                 <MenuItem component={Link} to="/faq">
                   {t('nav.faq')}
                 </MenuItem>
-                <MenuItem component={Link} to="/contact">
-                  {t('nav.contact')}
-                </MenuItem>
-                <MenuItem
-                  component="a"
-                  href="https://medium.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Blog
-                </MenuItem>
               </Menu>
             </Hidden>
             <div className={classes.spacer} />
@@ -153,6 +145,9 @@ function Navbar(props) {
           className={classes.drawerList}
           onClick={() => setDrawerOpen(false)}
         >
+          <ListItem component={Link} to="/contact" button={true}>
+            <ListItemText>{t('nav.contact')}</ListItemText>
+          </ListItem>
           <ListItem component={Link} to="/about" button={true}>
             <ListItemText>{t('nav.about')}</ListItemText>
           </ListItem>
@@ -161,9 +156,6 @@ function Navbar(props) {
           </ListItem>
           <ListItem component={Link} to="/faq" button={true}>
             <ListItemText>{t('nav.faq')}</ListItemText>
-          </ListItem>
-          <ListItem component={Link} to="/contact" button={true}>
-            <ListItemText>{t('nav.contact')}</ListItemText>
           </ListItem>
           <ListItem
             button={true}

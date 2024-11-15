@@ -5,6 +5,7 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import { useForm } from "react-hook-form";
 import newsletter from "./../util/newsletter";
+import contact from "./../util/contact";
 
 function Newsletter(props) {
   const [subscribed, setSubscribed] = useState(false);
@@ -12,12 +13,26 @@ function Newsletter(props) {
   const { handleSubmit, register, errors } = useForm();
 
   const onSubmit = ({ email }) => {
-    setSubscribed(true);
-    // Parent component can optionally
-    // find out when subscribed.
-    props.onSubscribed && props.onSubscribed();
-    // Subscribe them
-    newsletter.subscribe({ email });
+    // Create contact data object
+    const contactData = {
+      name: email,
+      email: email,
+      message: email
+    };
+
+    // Submit using contact utility
+    contact.submit(contactData)
+      .then(() => {
+        setSubscribed(true);
+        // Parent component can optionally
+        // find out when subscribed.
+        props.onSubscribed && props.onSubscribed();
+      })
+      .catch((error) => {
+        console.error("Failed to send subscription email:", error);
+        setSubscribed(true);
+        props.onSubscribed && props.onSubscribed();
+      });
   };
 
   return (

@@ -1,6 +1,6 @@
 export default {
   nav: {
-    about: 'Rreth nesh',
+    about: 'Kush ne jemi',
     pricing: 'Çmimet',
     more: 'Më shumë',
     faq: 'FAQ',
@@ -49,7 +49,7 @@ export default {
   },
   newsletter: {
     title: 'Qëndroni të Sigurt me MEB LLC Security',
-    subtitle: 'Na Kontaktoni Sot për Mbrojtje të Pakrahasueshme dhe Qetësi Mendore',
+    subtitle: 'Vendosni emailin ose ndonje menyre kontakti dhe ne do tju kontaktojm',
     subscribe: 'Abonohu',
     placeholder: 'Shkruani emailin tuaj',
     success: 'Ju jeni abonuar me sukses!'
@@ -59,7 +59,7 @@ export default {
     terms: 'Kushtet',
     privacy: 'Privatësia',
     company: 'Kompania',
-    about: 'Rreth nesh',
+    about: 'Kush ne jemi',
     contact: 'Kontakt',
     blog: 'Blog'
   },
@@ -148,6 +148,20 @@ export default {
     insurance: {
       question: "Çfarë lloj mbulimi sigurimi mbani?",
       answer: "Ne mbajmë mbulim gjithëpërfshirës sigurimi duke përfshirë përgjegjësinë e përgjithshme, përgjegjësinë profesionale, kompensimin e punonjësve dhe sigurimin e automjeteve. Mbulimi ynë përmbush ose tejkalon standardet e industrisë dhe kërkesat e klientëve, duke ofruar qetësi mendore për të gjithë palët e interesuara."
+    }
+  },
+  contact: {
+    title: 'Na Kontaktoni',
+    subtitle: 'Jemi këtu për t\'ju ndihmuar me çdo pyetje që keni',
+    form: {
+      name: 'Emri',
+      email: 'Email',
+      message: 'Mesazhi',
+      nameRequired: 'Ju lutem shkruani emrin tuaj',
+      emailRequired: 'Ju lutem shkruani emailin tuaj',
+      messageRequired: 'Ju lutem shkruani një mesazh',
+      send: 'Dërgo mesazhin',
+      success: 'Mesazhi juaj u dërgua me sukses!'
     }
   }
 }; 

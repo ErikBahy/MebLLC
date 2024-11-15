@@ -22,7 +22,7 @@ function IndexPage(props) {
         image="https://i.imgur.com/CGfH9oT.png"
         buttonText={t('hero.contactUs')}
         buttonColor="primary"
-        buttonPath="/pricing"
+        buttonPath="/contact"
       />
       <FeaturesSection
         bgColor="default"
