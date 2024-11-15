@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
 import Section from "./Section";
 import SectionHeader from "./SectionHeader";
+import { t } from "i18next";
 
 const useStyles = makeStyles((theme) => ({
   accordion: {
@@ -38,32 +39,30 @@ function FaqSection(props) {
 
   const items = [
     {
-      question: "Integer ornare neque mauris?",
-      answer:
-        "Integer ornare neque mauris, ac vulputate lacus venenatis et. Pellentesque ut ultrices purus. Suspendisse ut tincidunt eros. In velit mi, rhoncus dictum neque a, tincidunt lobortis justo.",
+      question: t('faq.licensing.question'),
+      answer: t('faq.licensing.answer'),
     },
     {
-      question: "Lorem ipsum dolor sit amet?",
-      answer:
-        "Nunc nulla mauris, laoreet vel cursus lacinia, consectetur sit amet tellus. Suspendisse ut tincidunt eros. In velit mi, rhoncus dictum neque a, tincidunt lobortis justo.",
+      question: t('faq.training.question'),
+      answer: t('faq.training.answer'),
     },
     {
-      question: "Suspendisse ut tincidunt?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, metus et mattis ullamcorper. Suspendisse ut tincidunt eros. In velit mi, rhoncus dictum neque a, tincidunt lobortis justo.",
+      question: t('faq.response.question'),
+      answer: t('faq.response.answer'),
     },
     {
-      question: "Ut enim ad minim veniam?",
-      answer:
-        "Suspendisse ut tincidunt eros. In velit mi, rhoncus dictum neque a, tincidunt lobortis justo.",
+      question: t('faq.equipment.question'),
+      answer: t('faq.equipment.answer'),
     },
     {
-      question: "In velit mi, rhoncus dictum neque?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      question: t('faq.customization.question'),
+      answer: t('faq.customization.answer'),
     },
+    {
+      question: t('faq.insurance.question'),
+      answer: t('faq.insurance.answer'),
+    }
   ];
-
   return (
     <Section
       bgColor={props.bgColor}
@@ -72,12 +71,12 @@ function FaqSection(props) {
       bgImageOpacity={props.bgImageOpacity}
     >
       <Container maxWidth="md">
-        <SectionHeader
-          title={props.title}
-          subtitle={props.subtitle}
-          size={4}
-          textAlign="center"
-        />
+      <SectionHeader
+  title={t('faq.title')}
+  subtitle={t('faq.subtitle')}
+  size={4}
+  textAlign="center"
+/>
 
         {items.map((item, index) => (
           <Accordion

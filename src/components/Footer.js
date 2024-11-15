@@ -139,7 +139,7 @@ function Footer(props) {
                   <ListItem
                     button={true}
                     component="a"
-                    href="https://facebook.com/DivjoyOfficial"
+                    href="https://www.facebook.com/profile.php?id=100063897652198"
                     target="_blank"
                     rel="noreferrer"
                     className={classes.listItem}
@@ -155,7 +155,7 @@ function Footer(props) {
                   <ListItem
                     button={true}
                     component="a"
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/mebsecurity.albania/"
                     target="_blank"
                     rel="noreferrer"
                     className={classes.listItem}
@@ -163,7 +163,7 @@ function Footer(props) {
                     <ListItemIcon className={classes.socialIcon}>
                       <img
                         src="https://uploads.divjoy.com/icon-instagram.svg"
-                        alt="Facebook"
+                        alt="Instagram"
                       />
                     </ListItemIcon>
                     <ListItemText>Instagram</ListItemText>

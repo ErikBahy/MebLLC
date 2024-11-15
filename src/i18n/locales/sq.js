@@ -62,5 +62,92 @@ export default {
     about: 'Rreth nesh',
     contact: 'Kontakt',
     blog: 'Blog'
+  },
+  about: {
+    hero: {
+      title: "Shërbime Elite të Sigurisë që nga 2015",
+      subtitle: "MEB LLC Security është konsoliduar si një ofrues kryesor i shërbimeve profesionale të sigurisë, e ndërtuar mbi themelet e ekselencës, integritetit dhe përkushtimit të palëkundur ndaj sigurisë së klientëve. Ekipi ynë përbëhet nga profesionistë të sigurisë me përvojë të gjerë në mbrojtjen personale, sigurinë e eventeve dhe mbikëqyrjen e pronave."
+    },
+    team: {
+      title: "Ekspertët Tanë të Sigurisë",
+      subtitle: "Njihuni me ekipin tonë të profesionistëve të trajnuar",
+      members: [
+        {
+          avatar: "https://i.imgur.com/CGfH9oT.png",
+          name: "Erald Bekteshi",
+          role: "Drejtori i Sigurisë",
+          bio: "Ish-operativ i forcave speciale me mbi 15 vjet përvojë në operacione sigurie të rrezikut të lartë. Ekspert në mbrojtjen e VIP-ave dhe menaxhimin e sigurisë së eventeve."
+        },
+        {
+          avatar: "https://i.imgur.com/CGfH9oT.png",
+          name: "Arben Malaj",
+          role: "Drejtori i Operacioneve",
+          bio: "I specializuar në planifikimin taktik dhe koordinimin e ekipit me 12 vjet përvojë në sigurinë private. Ekspert në sigurinë e kazinove dhe menaxhimin e eventeve të mëdha."
+        },
+        {
+          avatar: "https://i.imgur.com/CGfH9oT.png",
+          name: "Besnik Hoxha",
+          role: "Drejtori i Trajnimeve",
+          bio: "Ish-instruktor ushtarak me përvojë të gjerë në trajnimin e personelit të sigurisë. I specializuar në teknikat e mbrojtjes së afërt dhe protokollet e reagimit emergjent."
+        }
+      ]
+    }
+  },
+  pricing: {
+    customTitle: "Zgjidhje të Personalizuara Sigurie",
+    customSubtitle: "Ne ofrojmë shërbime sigurie të përshtatura bazuar në nevojat dhe kërkesat tuaja specifike. Na kontaktoni për një ofertë të personalizuar.",
+    contactUs: "Kërkoni Ofertë",
+    vip: {
+      title: "Mbrojtja VIP",
+      description: "Shërbime profesionale sigurie për individë të profilit të lartë, përfshirë mbrojtje personale diskrete dhe transport të sigurt."
+    },
+    property: {
+      title: "Siguria e Pronës",
+      description: "Zgjidhje gjithëpërfshirëse sigurie për pronat, përfshirë monitorimin 24/7, shërbimet e patrullimit dhe përgjigjen emergjente."
+    },
+    events: {
+      title: "Siguria e Eventeve",
+      description: "Shërbime të specializuara sigurie për evente të të gjitha përmasave, nga festat private deri tek grumbullimet e mëdha publike."
+    },
+    casino: {
+      title: "Siguria e Kazinove",
+      description: "Shërbime eksperte sigurie për kazinotë, duke siguruar një mjedis të sigurt për mysafirët dhe mbrojtjen e aseteve."
+    },
+    monitoring: {
+      title: "Monitorimi nga Dhoma e Operacioneve",
+      description: "Shërbime monitorimi të avancuar 24/7 me protokolle të përgjigjes së menjëhershme dhe survejim në kohë reale."
+    },
+    other: {
+      title: "Shërbime Shtesë",
+      description: "Zgjidhje të personalizuara sigurie për ambiente të ndryshme përfshirë hotele, banka, qendra tregtare dhe institucione qeveritare."
+    }
+  },
+  faq: {
+    title: "Pyetjet më të Shpeshta",
+    subtitle: "Gjeni përgjigje për pyetjet e zakonshme rreth shërbimeve tona të sigurisë",
+    licensing: {
+      question: "A është kompania juaj e licencuar dhe e certifikuar?",
+      answer: "Po, MEB LLC Security është plotësisht e licencuar dhe e siguruar. Ne mbajmë të gjitha certifikimet e kërkuara shtetërore dhe federale, dhe personeli ynë i sigurisë është i licencuar individualisht në përputhje me rregulloret lokale. Ne përditësojmë rregullisht certifikimet tona për të siguruar përputhshmërinë me standardet më të fundit të industrisë së sigurisë."
+    },
+    training: {
+      question: "Çfarë lloj trajnimi marrin oficerët tuaj të sigurisë?",
+      answer: "Oficerët tanë të sigurisë i nënshtrohen një trajnimi gjithëpërfshirës që përfshin sigurinë fizike, përgjigjen ndaj emergjencave, ndihmën e parë/CPR, zgjidhjen e konflikteve dhe shërbimin ndaj klientit. Shumë nga anëtarët e ekipit tonë kanë përvojë ushtarake ose në zbatimin e ligjit, dhe ne ofrojmë trajnime të vazhdueshme për të mbajtur aftësitë të mprehta dhe aktuale me praktikat më të mira të industrisë."
+    },
+    response: {
+      question: "Cili është koha juaj tipike e përgjigjes ndaj incidenteve të sigurisë?",
+      answer: "Koha jonë e përgjigjes ndryshon bazuar në nivelin e shërbimit dhe vendndodhjen, por ne mbajmë një qendër operacionesh 24/7 dhe zakonisht i përgjigjemi situatave urgjente brenda minutash. Për mbrojtjen e VIP-ave dhe objektet me siguri të lartë, ne kemi personel në vend ose në afërsi të menjëhershme në çdo kohë."
+    },
+    equipment: {
+      question: "Çfarë lloj pajisjesh dhe teknologjie sigurie përdorni?",
+      answer: "Ne përdorim pajisje sigurie të teknologjisë së fundit, përfshirë sisteme të avancuara survejimi, pajisje komunikimi dhe teknologji monitorimi. Qendra jonë e operacioneve është e pajisur me softuerin më të fundit të menaxhimit të sigurisë, dhe ekipet tona janë të pajisura me pajisje sigurie standarde dhe të specializuara bazuar në kërkesat e detyrave."
+    },
+    customization: {
+      question: "A mund të personalizoni shërbimet e sigurisë për nevoja specifike?",
+      answer: "Absolutisht. Ne kuptojmë që çdo klient ka kërkesa unike të sigurisë. Ne kryejmë vlerësime të hollësishme të sigurisë dhe zhvillojmë plane të personalizuara sigurie që adresojnë rreziqe, shqetësime dhe objektiva specifike. Shërbimet tona mund të shkallëzohen dhe përshtaten për të përmbushur nevojat e ndryshueshme të sigurisë."
+    },
+    insurance: {
+      question: "Çfarë lloj mbulimi sigurimi mbani?",
+      answer: "Ne mbajmë mbulim gjithëpërfshirës sigurimi duke përfshirë përgjegjësinë e përgjithshme, përgjegjësinë profesionale, kompensimin e punonjësve dhe sigurimin e automjeteve. Mbulimi ynë përmbush ose tejkalon standardet e industrisë dhe kërkesat e klientëve, duke ofruar qetësi mendore për të gjithë palët e interesuara."
+    }
   }
 }; 

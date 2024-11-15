@@ -5,21 +5,18 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import CheckIcon from "@material-ui/icons/Check";
-import ListItemText from "@material-ui/core/ListItemText";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Section from "./Section";
 import SectionHeader from "./SectionHeader";
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
   card: {
+    height: "100%",
     display: "flex",
     flexDirection: "column",
-    height: "100%",
+    textAlign: "center",
   },
   cardContent: {
     display: "flex",
@@ -27,60 +24,54 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     padding: theme.spacing(3),
   },
-  price: {
-    display: "flex",
-    alignItems: "baseline",
+  serviceIcon: {
+    fontSize: "3rem",
+    color: theme.palette.primary.main,
+    marginBottom: theme.spacing(2),
   },
-  listItem: {
-    paddingTop: 2,
-    paddingBottom: 2,
-  },
-  perkIcon: {
-    minWidth: 34,
-    color: theme.palette.success.main,
-  },
+  highlight: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
+    padding: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+  }
 }));
 
 function PricingSection(props) {
   const classes = useStyles();
+  const { t } = useTranslation();
 
-  const plans = [
+  const services = [
     {
-      id: "starter",
-      name: "Starter",
-      price: "10",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-      ],
+      title: t('pricing.vip.title'),
+      description: t('pricing.vip.description'),
+      icon: "🛡️"
     },
     {
-      id: "pro",
-      name: "Pro",
-      price: "20",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-        "Faucibus porta lacus fringilla vel",
-        "Aenean sit amet erat nunc",
-      ],
+      title: t('pricing.property.title'),
+      description: t('pricing.property.description'),
+      icon: "🏢"
     },
     {
-      id: "business",
-      name: "Business",
-      price: "50",
-      perks: [
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-        "Integer molestie lorem at massa",
-        "Faucibus porta lacus fringilla vel",
-        "Aenean sit amet erat nunc",
-        "Lorem ipsum dolor sit amet",
-        "Consectetur adipiscing elit",
-      ],
+      title: t('pricing.events.title'),
+      description: t('pricing.events.description'),
+      icon: "🎯"
     },
+    {
+      title: t('pricing.casino.title'),
+      description: t('pricing.casino.description'),
+      icon: "🎰"
+    },
+    {
+      title: t('pricing.monitoring.title'),
+      description: t('pricing.monitoring.description'),
+      icon: "📹"
+    },
+    {
+      title: t('pricing.other.title'),
+      description: t('pricing.other.description'),
+      icon: "🔒"
+    }
   ];
 
   return (
@@ -91,64 +82,38 @@ function PricingSection(props) {
       bgImageOpacity={props.bgImageOpacity}
     >
       <Container>
-        <SectionHeader
-          title={props.title}
-          subtitle={props.subtitle}
-          size={4}
-          textAlign="center"
-        />
-        <Grid container={true} justifyContent="center" spacing={4}>
-          {plans.map((plan, index) => (
-            <Grid item={true} xs={12} md={4} key={index}>
+        <Box className={classes.highlight}>
+          <Typography variant="h4" align="center" gutterBottom>
+            {t('pricing.customTitle')}
+          </Typography>
+          <Typography variant="subtitle1" align="center">
+            {t('pricing.customSubtitle')}
+          </Typography>
+        </Box>
+
+        <Grid container spacing={4}>
+          {services.map((service, index) => (
+            <Grid item xs={12} md={4} key={index}>
               <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6" component="h2">
-                    {plan.name}
+                  <Typography variant="h1" className={classes.serviceIcon}>
+                    {service.icon}
                   </Typography>
-                  <Box className={classes.price} mt={1}>
-                    <Typography variant="h3">${plan.price}</Typography>
-                    <Typography variant="h4" color="textSecondary">
-                      /mo
-                    </Typography>
-                  </Box>
-
-                  {plan.description && (
-                    <Box mt={2}>
-                      <Typography component="p" color="textSecondary">
-                        {plan.description}
-                      </Typography>
-                    </Box>
-                  )}
-
-                  {plan.perks && (
-                    <Box mt={1}>
-                      <List aria-label="perks">
-                        {plan.perks.map((perk, index) => (
-                          <ListItem
-                            className={classes.listItem}
-                            disableGutters={true}
-                            key={index}
-                          >
-                            <ListItemIcon className={classes.perkIcon}>
-                              <CheckIcon />
-                            </ListItemIcon>
-                            <ListItemText>{perk}</ListItemText>
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Box>
-                  )}
-
+                  <Typography variant="h5" gutterBottom>
+                    {service.title}
+                  </Typography>
+                  <Typography variant="body1" color="textSecondary">
+                    {service.description}
+                  </Typography>
                   <Box mt="auto" pt={3}>
                     <Button
-                      component="a"
                       variant="contained"
                       color="primary"
                       size="large"
-                      fullWidth={true}
-                      href={`https://app.mysite.com/purchase/${plan.id}`}
+                      fullWidth
+                      href="/contact"
                     >
-                      Choose
+                      {t('pricing.contactUs')}
                     </Button>
                   </Box>
                 </CardContent>
