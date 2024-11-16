@@ -6,12 +6,10 @@ import Container from "@material-ui/core/Container";
 import Section from "./Section";
 import { Link } from "./../util/router";
 import LegalTerms from "./LegalTerms";
-import LegalPrivacy from "./LegalPrivacy";
 
 function LegalSection(props) {
   const validSections = {
     "terms-of-service": true,
-    "privacy-policy": true,
   };
 
   const section = validSections[props.section]
@@ -42,18 +40,10 @@ function LegalSection(props) {
           label="Terms of Service"
           value="terms-of-service"
         />
-        <Tab
-          component={Link}
-          to="/legal/privacy-policy"
-          label="Privacy Policy"
-          value="privacy-policy"
-        />
       </Tabs>
       <Box mt={5}>
         <Container>
           {section === "terms-of-service" && <LegalTerms {...data} />}
-
-          {section === "privacy-policy" && <LegalPrivacy {...data} />}
         </Container>
       </Box>
     </Section>

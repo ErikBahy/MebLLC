@@ -8,17 +8,22 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
   },
   inner: {
-    // Fill parent aspect ratio
     position: "absolute",
     top: 0,
     right: 0,
     bottom: 0,
     left: 0,
-    // Center contents
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "center",
     overflow: "hidden",
+  },
+  image: {
+    width: "100%",
+    height: "auto",
+    minHeight: "100%",
+    objectFit: "cover",
+    objectPosition: "top center",
   },
 }));
 
@@ -32,7 +37,16 @@ function AspectRatio(props) {
         paddingBottom: (1 / props.ratio) * 100 + "%",
       }}
     >
-      <div className={classes.inner}>{props.children}</div>
+      <div className={classes.inner}>
+        {React.Children.map(props.children, child => {
+          if (child.type === 'img') {
+            return React.cloneElement(child, {
+              className: `${child.props.className || ''} ${classes.image}`.trim()
+            });
+          }
+          return child;
+        })}
+      </div>
     </div>
   );
 }

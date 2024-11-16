@@ -1,58 +1,62 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  languageButton: {
+  buttonGroup: {
     marginRight: theme.spacing(1),
+  },
+  button: {
     minWidth: 'auto',
-    padding: theme.spacing(0.5, 1),
+    padding: theme.spacing(0.25, 0.75),
+    fontSize: '0.875rem',
+  },
+  activeButton: {
+    color: theme.palette.primary.main,
+    backgroundColor: 'transparent',
+    fontWeight: 500,
+    '&:hover': {
+      backgroundColor: 'transparent',
+      color: theme.palette.primary.dark,
+    },
+  },
+  inactiveButton: {
+    color: theme.palette.text.secondary,
+    backgroundColor: 'transparent',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      color: theme.palette.text.primary,
+    },
   }
 }));
 
 function LanguageSwitcher() {
-  const [anchorEl, setAnchorEl] = useState(null);
   const { i18n } = useTranslation();
   const classes = useStyles();
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
-    handleClose();
   };
 
+  const isEnglish = i18n.language === 'en';
+
   return (
-    <div style={{ display: 'inline-block' }}>
+    <ButtonGroup className={classes.buttonGroup} color="inherit">
       <Button
-        color="inherit"
-        onClick={handleClick}
-        endIcon={<ExpandMoreIcon />}
-        className={classes.languageButton}
+        className={`${classes.button} ${isEnglish ? classes.activeButton : classes.inactiveButton}`}
+        onClick={() => changeLanguage('en')}
       >
-        {i18n.language === 'sq' ? 'SQ' : 'EN'}
+        {i18n.language === 'sq' ? 'Anglisht' : 'English'}
       </Button>
-      <Menu
-        id="language-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
+      <Button
+        className={`${classes.button} ${!isEnglish ? classes.activeButton : classes.inactiveButton}`}
+        onClick={() => changeLanguage('sq')}
       >
-        <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
-        <MenuItem onClick={() => changeLanguage('sq')}>Shqip</MenuItem>
-      </Menu>
-    </div>
+        {i18n.language === 'sq' ? 'Shqip' : 'Albanian'}
+      </Button>
+    </ButtonGroup>
   );
 }
 

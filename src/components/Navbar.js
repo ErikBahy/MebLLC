@@ -157,17 +157,8 @@ function Navbar(props) {
           <ListItem component={Link} to="/faq" button={true}>
             <ListItemText>{t('nav.faq')}</ListItemText>
           </ListItem>
-          <ListItem
-            button={true}
-            component="a"
-            href="https://medium.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ListItemText>Blog</ListItemText>
-          </ListItem>
           <ListItem>
-            <LanguageSwitcher />
+            <LanguageSwitcher displayType="toggle" />
           </ListItem>
           <ListItem>
             <IconButton

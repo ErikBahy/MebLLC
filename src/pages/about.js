@@ -13,8 +13,8 @@ function AboutPage(props) {
       <HeroSection
         bgColor="primary"
         size="large"
-        bgImage="https://images.unsplash.com/photo-1462206092226-f46025ffe607?auto=format&fit=crop&w=1600&h=800&q=80"
-        bgImageOpacity={0.2}
+        bgImage="/images/meb11.jpg"
+        bgImageOpacity={0.5}
         title={t('about.hero.title')}
         subtitle={t('about.hero.subtitle')}
       />

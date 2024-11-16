@@ -163,5 +163,49 @@ export default {
       send: 'Dërgo mesazhin',
       success: 'Mesazhi juaj u dërgua me sukses!'
     }
+  },
+  legal: {
+    terms: {
+      title: "Kushtet e Shërbimit",
+      sections: {
+        licensing: {
+          title: "1. Licencimi i Kompanisë",
+          content: "MEB LLC Security është një kompani sigurie plotësisht e licencuar dhe e siguruar që operon në përputhje me të gjitha rregulloret shtetërore dhe federale në fuqi. Licenca jonë e sigurisë është shfaqur më poshtë për verifikim:"
+        },
+        services: {
+          title: "2. Përmbledhje e Shërbimeve",
+          content: "MEB LLC Security ofron shërbime profesionale të sigurisë duke përfshirë, por pa u kufizuar në mbrojtjen e VIP-ave, sigurinë e pronës, sigurinë e eventeve dhe shërbimet e survejimit. Duke përdorur shërbimet tona, klientët bien dakord me termat dhe kushtet e përcaktuara në këtë dokument."
+        },
+        obligations: {
+          title: "3. Detyrimet e Klientit",
+          content: "Klientët që përdorin shërbimet tona bien dakord të:",
+          items: [
+            "Sigurojnë informacion të saktë dhe të plotë në lidhje me kërkesat e sigurisë",
+            "Japin akses dhe bashkëpunim të nevojshëm personelit tonë të sigurisë",
+            "Respektojnë të gjitha protokollet dhe procedurat e sigurisë",
+            "Kryejnë pagesat në kohë sipas kushteve të rëna dakord"
+          ]
+        },
+        insurance: {
+          title: "4. Përgjegjësia dhe Sigurimi",
+          content: "MEB LLC Security mban mbulim gjithëpërfshirës sigurimi duke përfshirë:",
+          items: [
+            "Sigurim i Përgjegjësisë së Përgjithshme",
+            "Sigurim i Përgjegjësisë Profesionale",
+            "Sigurim i Kompensimit të Punonjësve",
+            "Sigurim i Automjeteve për Operacionet e Sigurisë"
+          ]
+        },
+        confidentiality: {
+          title: "5. Konfidencialiteti",
+          content: "Ne ruajmë konfidencialitet të rreptë në lidhje me të gjithë informacionin e klientit dhe operacionet e sigurisë. Personeli ynë është i lidhur me marrëveshje konfidencialiteti dhe është i trajnuar në protokollet e sigurisë së informacionit."
+        },
+        termination: {
+          title: "6. Përfundimi i Shërbimit",
+          content: "Secila palë mund të përfundojë shërbimet me njoftim me shkrim sipas kushteve të kontratës. Përfundimi emergjent mund të zbatohet në raste të shkeljeve serioze të kontratës ose protokolleve të sigurisë."
+        },
+        lastUpdated: "Përditësuar së fundmi:"
+      }
+    }
   }
 }; 

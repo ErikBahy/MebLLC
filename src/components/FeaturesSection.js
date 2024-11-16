@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
 
 // Define images outside the component (you can move this to a separate config file if preferred)
 const featureImages = [
-  "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg",  // Replace with your actual image paths
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWTeDjrQ5djB2wkM-WjNxsuyHs2tcOhzXYg&s",
+  "/images/meb10.jpg",  // Replace with your actual image paths
+  "/images/meb13.jpg",
+  "/images/meb11.jpg",
   "https://i.imgur.com/FegsL5M.png",
-  "https://i.imgur.com/Lh9bxdu.png",
-  "https://i.imgur.com/kGUNeiv.png",
-  "https://www.p-3-security.com/wp-content/uploads/2020/01/Personenschutz_und_VIP-Security_6-2.jpg"
+  "/images/meb5.jpg",
+  "/images/meb2.jpg"
 ];
 
 function FeaturesSection(props) {

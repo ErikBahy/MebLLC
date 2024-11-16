@@ -81,9 +81,9 @@ function Footer(props) {
               <LinkMui component={Link} to="/legal/terms-of-service">
                 {t('footer.terms', 'Terms')}
               </LinkMui>
-              <LinkMui component={Link} to="/legal/privacy-policy">
+              {/* <LinkMui component={Link} to="/legal/privacy-policy">
                 {t('footer.privacy', 'Privacy')}
-              </LinkMui>
+              </LinkMui> */}
             </div>
           </Grid>
           <Grid item={true} xs={12} md={6}>
