@@ -4,6 +4,7 @@ export default {
     pricing: 'Pricing',
     more: 'More',
     faq: 'FAQ',
+    legal: 'Legal Terms', 
     contact: 'Contact',
     signin: 'Sign in',
     signup: 'Sign up'

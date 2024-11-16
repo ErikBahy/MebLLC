@@ -4,6 +4,7 @@ export default {
     pricing: 'Çmimet',
     more: 'Më shumë',
     faq: 'FAQ',
+    legal: 'Kushtet Ligjore',
     contact: 'Kontakt',
     signin: 'Hyr',
     signup: 'Regjistrohu'

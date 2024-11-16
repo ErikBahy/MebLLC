@@ -108,6 +108,9 @@ function Navbar(props) {
                 <MenuItem component={Link} to="/faq">
                   {t('nav.faq')}
                 </MenuItem>
+                <MenuItem component={Link} to="/legal/terms-of-service">
+                  {t('nav.legal')}
+                </MenuItem>
               </Menu>
             </Hidden>
             <div className={classes.spacer} />
@@ -156,6 +159,9 @@ function Navbar(props) {
           </ListItem>
           <ListItem component={Link} to="/faq" button={true}>
             <ListItemText>{t('nav.faq')}</ListItemText>
+          </ListItem>
+          <ListItem component={Link} to="/legal/terms-of-service" button={true}>
+            <ListItemText>{t('nav.legal')}</ListItemText>
           </ListItem>
           <ListItem>
             <LanguageSwitcher displayType="toggle" />
