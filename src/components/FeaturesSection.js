@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
 
 // Define images outside the component (you can move this to a separate config file if preferred)
 const featureImages = [
-  "/images/meb10.jpg",  // Replace with your actual image paths
+  "/images/meb11.jpg",  // Replace with your actual image paths
   "/images/meb13.jpg",
-  "/images/meb11.jpg",
   "https://i.imgur.com/FegsL5M.png",
-  "/images/meb5.jpg",
+  "/images/meb15.png",
+  "/images/meb16.png",
   "/images/meb2.jpg"
 ];
 
