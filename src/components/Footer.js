@@ -114,7 +114,7 @@ function Footer(props) {
                   >
                     <ListItemText>{t('footer.contact')}</ListItemText>
                   </ListItem>
-                  <ListItem
+                  {/* <ListItem
                     button={true}
                     component="a"
                     href="https://medium.com"
@@ -123,7 +123,7 @@ function Footer(props) {
                     className={classes.listItem}
                   >
                     <ListItemText>{t('footer.blog')}</ListItemText>
-                  </ListItem>
+                  </ListItem> */}
                 </List>
               </Grid>
               <Grid item={true} xs={12} md={4}>

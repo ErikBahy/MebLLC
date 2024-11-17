@@ -164,5 +164,49 @@ export default {
       send: 'Send message',
       success: 'Your message has been sent successfully!',
     }
+  },
+  legal: {
+    terms: {
+      title: "Terms of Service",
+      sections: {
+        licensing: {
+          title: "1. Company Licensing",
+          content: "MEB LLC Security is a fully licensed and insured security company operating in compliance with all applicable state and federal regulations. Our security license is displayed below for verification:"
+        },
+        services: {
+          title: "2. Services Overview",
+          content: "MEB LLC Security provides professional security services including, but not limited to, VIP protection, property security, event security, and surveillance services. By using our services, clients agree to the terms and conditions set forth in this document."
+        },
+        obligations: {
+          title: "3. Client Obligations",
+          content: "Clients using our services agree to:",
+          items: [
+            "Provide accurate and complete information regarding security requirements",
+            "Grant necessary access and cooperation to our security personnel",
+            "Respect all security protocols and procedures",
+            "Make timely payments according to agreed terms"
+          ]
+        },
+        insurance: {
+          title: "4. Liability and Insurance",
+          content: "MEB LLC Security maintains comprehensive insurance coverage including:",
+          items: [
+            "General Liability Insurance",
+            "Professional Liability Insurance",
+            "Workers' Compensation Insurance",
+            "Vehicle Insurance for Security Operations"
+          ]
+        },
+        confidentiality: {
+          title: "5. Confidentiality",
+          content: "We maintain strict confidentiality regarding all client information and security operations. Our personnel are bound by confidentiality agreements and are trained in information security protocols."
+        },
+        termination: {
+          title: "6. Service Termination",
+          content: "Either party may terminate services with written notice according to contract terms. Emergency termination may apply in cases of serious contract or security protocol breaches."
+        },
+        lastUpdated: "Last Updated:"
+      }
+    }
   }
 }; 
